@@ -172,16 +172,6 @@ def read_dict_output(process, template_file, read_length= None):
     output = template_to_dict(result, fsm=template_fsm)
     debug_log(f'Generated dictionary: {output}')
     return output    
-"""
-def read_dict_output(process, template_file):
-    result = read_text_output(process)
-    #print(result)
-    template_fsm = template_to_fsm(template_file)
-    #print(template_fsm)
-    output = template_to_dict(result, fsm = template_fsm)
-    debug_log(f'Generated dictionary: {output}')
-    return output
-"""
 
 
 def TC_banner(number, desc, reason = "None"):
