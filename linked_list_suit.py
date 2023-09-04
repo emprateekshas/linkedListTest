@@ -66,7 +66,6 @@ def match_list(result, expected_output):
 
 def test_case_1_delete_from_empty(process):
     tc_io_map = {"expected_output": "List Element Count: 0"}
-    #TC_banner(reason = "started")
     TC_banner(1, "Delete from empty list", "STARTED")
     #print("Testing for deleting from empty list\n")
     print("Prerequisite: ")
@@ -82,7 +81,6 @@ def test_case_1_delete_from_empty(process):
     select_linked_list_op(process, op = "display")
     result = get_output_dictionary(process)
     status = match_list(result, tc_io_map['expected_output'])
-    #print("status",status)
     TC_banner(1, "Delete from empty list","PASSED" if status == True else "FAILED")
 
 
@@ -91,7 +89,6 @@ def test_case_2_add_to_empty(process):
     tc_io_map = {"expected_output": "List Element Count: 1\nList Elements: 5"}
     exp_op = tc_io_map["expected_output"]
     TC_banner(2, "Add element to empty list", reason = "STARTED")
-    #print("\nTesting for adding to empty list\n")
     print("Prerequisite: ")
     select_linked_list_op(process, op = "display")
     data = display_data(process)
@@ -111,8 +108,6 @@ def test_case_2_add_to_empty(process):
 
     select_linked_list_op(process, op = "display")
     result = get_output_dictionary(process)
-    #c_result = {'result': '\n'.join([item['result'] for item in result])}
-    #print(c_result)
     
     status = match_list(result, tc_io_map['expected_output'])
     TC_banner(2, "Add element to empty list", "PASSED" if status == True else "FAILED")
@@ -122,7 +117,6 @@ def test_case_3_add_to_list_having_1_ele(process):
     tc_io_map = {"expected_output": "List Element Count: 2\nList Elements: 5, 8"}
     exp_op = tc_io_map["expected_output"]
     TC_banner(3, "Add element to already existing list", reason = "STARTED")
-    #print("\nTesting for adding to already existing list")
     print("Prerequisite: ")
     select_linked_list_op(process, op = "display")
     data = display_data(process)
@@ -226,7 +220,6 @@ def linked_list_test_main():
     prgm_exec_file ="/home/prateeksha/linkedList/linkedListTest/linked_list"
 
     status, exec_file = compile_program(prgm_src_file, prgm_exec_file)
-    #if status != True:
     if status == False:
         return
 
